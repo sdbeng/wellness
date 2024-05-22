@@ -1,6 +1,7 @@
 package com.aitechhub.wellness.model;
 
 import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -12,9 +13,11 @@ import java.time.LocalDateTime;
 //add lombok annotations
 
 @Entity
+@Table(name = "clinic")
 @Getter
 @Setter
 @NoArgsConstructor
+@AllArgsConstructor
 public class Clinic {
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "clinic_generator")
